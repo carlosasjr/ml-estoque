@@ -33,7 +33,6 @@ class StockServices
     {
         list($amostral, $labels) = $this->getDataSets($product);
 
-
         $regression = new LeastSquares();
 
         $regression->train($amostral, $labels);
@@ -56,7 +55,6 @@ class StockServices
     {
         $amostral = [];
         $labels = [];
-
 
         foreach ($product->stocks as $stock) {
             array_push($amostral, [
